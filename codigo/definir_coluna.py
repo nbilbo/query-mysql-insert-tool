@@ -1,8 +1,9 @@
 from tkinter import Tk, Frame, Button, Toplevel, IntVar, Checkbutton
 from functools import partial
+#from os import system
 from default_button import DefaultButton
 from default_entry import DefaultEntry
-from os import system
+
 
 class DefinirColuna( Toplevel ):
     #construtor
@@ -220,7 +221,7 @@ def main():
     nova.pack( fill = "x" )
     root.geometry( "400x400+0+0" )
     root.mainloop( )
-    system( "cls" )
+    #system( "cls" )
 
 if __name__ == "__main__":
     main()

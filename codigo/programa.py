@@ -2,6 +2,7 @@ from tkinter import Tk, Frame, Button
 from default_entry import DefaultEntry
 from local_coluna import LocalColuna
 from local_texto import LocalTexto
+from default_button import DefaultButton
 
 class Programa( Tk ):
     #construtor
@@ -16,7 +17,7 @@ class Programa( Tk ):
         self.definirTabela.pack( fill = "x", padx = 5, pady = 5 )
         
         #frameBottom
-        frameBottomBackground = "gray"
+        frameBottomBackground = "black"
         self.frameBottom = Frame( self, bg = frameBottomBackground )
         self.frameBottom.pack( fill = "both", expand = True, padx = 5, pady = 5 )
 
@@ -24,9 +25,10 @@ class Programa( Tk ):
         self.localColuna = LocalColuna( self.frameBottom, bg = "blue" )
         self.localColuna.pack( side = "left", fill = "both", expand = True )
 
-        #button
-        self.button = Button( self.frameBottom, width = 5, text = ">>" )
-        self.button.pack( side = "left", padx = 5, pady = 5 )
+        #frameButton
+        self.frameButton = DefaultButton( self.frameBottom, textoButton = ">>", bg = "blue" )
+        self.frameButton.pack( side = "left", padx = 5, pady = 5 )
+        self.button = self.frameButton.button
         self.button[ "command" ] = self.buttonClick
 
         #localTexto

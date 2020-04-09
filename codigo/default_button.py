@@ -1,5 +1,6 @@
 from tkinter import Tk, Button, Frame
-from os import system
+#from os import system
+from default_font import DefaultFont
 
 class DefaultButton( Frame ):
     #construtor
@@ -10,7 +11,7 @@ class DefaultButton( Frame ):
         #self["background"] = "black"
 
         #button
-        self.button = Button( self )
+        self.button = Button( self, font = DefaultFont( ) )
         self.setTextoButton( textoButton )
         self.button.pack( padx = 5, pady = 5 )
 
@@ -30,7 +31,7 @@ def main():
     frameButton.pack( fill = "x", padx = 5, pady = 5 )
     root.geometry( "400x400+0+0" )
     root.mainloop( )
-    system( "cls" )
+    #system( "cls" )
 
 
 if __name__ == "__main__":

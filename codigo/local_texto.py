@@ -1,5 +1,6 @@
 from tkinter import Tk, Text, Scrollbar, Frame
-from os import system
+#from os import system
+from default_font import DefaultFont
 
 class LocalTexto( Frame ):
     #construtor
@@ -7,7 +8,7 @@ class LocalTexto( Frame ):
         super().__init__( *args, **kwargs )
 
         #localTexto e scrollTexto
-        self.localTexto = Text( self )
+        self.localTexto = Text( self, font = DefaultFont( ) )
         self.scrollTexto = Scrollbar( self, command = self.localTexto.yview )
         
         self.localTexto.configure( yscrollcommand = self.scrollTexto.set )
@@ -27,7 +28,7 @@ def main( ):
     texto.pack_propagate( False )
     root.geometry( "400x400+0+0" )
     root.mainloop( )
-    system( "cls" )
+    #system( "cls" )
 
 if __name__ == "__main__":
     main()

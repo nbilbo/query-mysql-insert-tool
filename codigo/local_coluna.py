@@ -1,8 +1,9 @@
 from tkinter import Tk, Frame
+from os import system
 from default_button import DefaultButton
 from definir_coluna import DefinirColuna
 from frame_scroll import FrameScroll
-from os import system
+
 
 class LocalColuna( Frame ):
     #construtor

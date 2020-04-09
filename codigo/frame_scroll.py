@@ -63,7 +63,7 @@ def main():
         novoFrame.pack(side = "top", fill ="x", padx = 5, pady = 5)
     root.geometry( "400x400+0+0" )
     root.mainloop( )
-    system( "cls" )
+    #system( "cls" )
 
 if __name__ == "__main__":
     main()

@@ -1,9 +1,10 @@
 from tkinter import Tk, Frame, Entry, Label, StringVar
-from os import system
+#from os import system
+from default_font import DefaultFont
 
 class DefaultEntry( Frame ):
     #construtor
-    def __init__( self, *args, textoLabel = "Label", larguraLabel = 15, **kwargs ):
+    def __init__( self, *args, textoLabel = "Label", larguraLabel = 11, **kwargs ):
         super().__init__( *args, **kwargs )
 
         #background
@@ -11,12 +12,12 @@ class DefaultEntry( Frame ):
 
         #label
         self.stringLabel = StringVar()
-        self.label = Label( self, width = larguraLabel, textvariable = self.stringLabel )
+        self.label = Label( self, width = larguraLabel, textvariable = self.stringLabel, font = DefaultFont( ) )
         self.setTextoLabel( textoLabel )
         self.label.pack( side = "left", padx = 5, pady = 5 )
 
         #Entry
-        self.entry = Entry( self )
+        self.entry = Entry( self, font = DefaultFont( ) )
         self.entry.pack( side = "left", fill = "x", expand = True, padx = 5, pady = 5 )
     
     #métodos
@@ -42,7 +43,7 @@ def main( ):
     DefaultEntry( root, textoLabel = "Label", bg = "red" ).pack( fill = "x", padx = 5, pady = 5 )
     root.geometry( "400x400+0+0" )
     root.mainloop( )
-    system( "cls" )
+    #system( "cls" )
 
 
 if __name__ == "__main__":
