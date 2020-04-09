@@ -17,7 +17,7 @@ class DefaultEntry( Frame ):
         self.label.pack( side = "left", padx = 5, pady = 5 )
 
         #Entry
-        self.entry = Entry( self, font = DefaultFont( ) )
+        self.entry = Entry( self, bg = "white", font = DefaultFont( ) )
         self.entry.pack( side = "left", fill = "x", expand = True, padx = 5, pady = 5 )
     
     #métodos

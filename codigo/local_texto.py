@@ -8,7 +8,7 @@ class LocalTexto( Frame ):
         super().__init__( *args, **kwargs )
 
         #localTexto e scrollTexto
-        self.localTexto = Text( self, font = DefaultFont( ) )
+        self.localTexto = Text( self, bg = "white", font = DefaultFont( ) )
         self.scrollTexto = Scrollbar( self, command = self.localTexto.yview )
         
         self.localTexto.configure( yscrollcommand = self.scrollTexto.set )
